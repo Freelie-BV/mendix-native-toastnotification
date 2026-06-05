@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="com.freelie.widget.native.toastnotification.ToastNotification" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Native"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Toast Notification</name>
+    <description>This widget shows a toast notification to the user. It can be a success, warning, danger or info notification.</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="Data">
+            <property key="type" type="attribute" required="true">
+                <caption>Type</caption>
+                <description>Enumeration attribute (success, warning, error, info) that determines the background color and default icon.</description>
+                <attributeTypes>
+                    <attributeType name="Enum"/>
+                </attributeTypes>
+            </property>
+            <property key="header" type="attribute" required="true">
+                <caption>Header</caption>
+                <description>String attribute shown as the bold title of the toast.</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="body" type="attribute" required="false">
+                <caption>Body</caption>
+                <description>Optional string attribute shown as the body text of the toast.</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="visible" type="attribute" required="true">
+                <caption>Visible</caption>
+                <description>Boolean attribute. The toast shows when true; the widget sets it back to false after dismiss.</description>
+                <attributeTypes>
+                    <attributeType name="Boolean"/>
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Behavior">
+            <property key="autoDismissDuration" type="integer" defaultValue="3">
+                <caption>Auto-dismiss duration</caption>
+                <description>Seconds before the toast auto-dismisses. Set to 0 to disable auto-dismiss.</description>
+            </property>
+            <property key="swipeToDismiss" type="boolean" defaultValue="true">
+                <caption>Swipe to dismiss</caption>
+                <description>Enables the swipe gesture to dismiss (swipe up when position is top, swipe down when position is bottom).</description>
+            </property>
+            <property key="position" type="enumeration" defaultValue="top">
+                <caption>Position</caption>
+                <description>Vertical anchor position of the toast on screen.</description>
+                <enumerationValues>
+                    <enumerationValue key="top">Top</enumerationValue>
+                    <enumerationValue key="bottom">Bottom</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Appearance">
+            <property key="customIconSuccess" type="icon" required="false">
+                <caption>Custom icon — success</caption>
+                <description>Overrides the default success icon. Falls back to the built-in glyph when not set.</description>
+            </property>
+            <property key="customIconWarning" type="icon" required="false">
+                <caption>Custom icon — warning</caption>
+                <description>Overrides the default warning icon. Falls back to the built-in glyph when not set.</description>
+            </property>
+            <property key="customIconError" type="icon" required="false">
+                <caption>Custom icon — error</caption>
+                <description>Overrides the default error icon. Falls back to the built-in glyph when not set.</description>
+            </property>
+            <property key="customIconInfo" type="icon" required="false">
+                <caption>Custom icon — info</caption>
+                <description>Overrides the default info icon. Falls back to the built-in glyph when not set.</description>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Events">
+            <property key="onDismiss" type="action" required="false">
+                <caption>On dismiss</caption>
+                <description>Fires when the toast is dismissed for any reason (timer, swipe, or visible set to false externally).</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
