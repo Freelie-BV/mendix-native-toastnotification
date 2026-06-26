@@ -25,21 +25,20 @@
     "@mendix/pluggable-widgets-tools": "^11.6.0",
     "@types/big.js": "^6.0.2"
   },
-  "dependencies": {
-
-  },
   "resolutions": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "react-native": "~0.78.2"
+    "react-native": "~0.78.2",
+    "@types/react-native": "0.78.2"
   },
   "overrides": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "react-native": "~0.78.2"
+    "react-native": "~0.78.2",
+    "@types/react-native": "0.78.2"
   }
 }
