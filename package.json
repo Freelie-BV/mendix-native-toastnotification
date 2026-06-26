@@ -22,8 +22,11 @@
     "release": "pluggable-widgets-tools release:native"
   },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "^11.6.0",
-    "@types/big.js": "^6.0.2"
+    "@mendix/pluggable-widgets-tools": "11.8.1",
+    "@types/big.js": "^6.0.2",
+    "@types/react": "^19.2.17",
+    "react": "^19.2.7",
+    "react-native": "^0.78.3"
   },
   "resolutions": {
     "react": "^19.0.0",
